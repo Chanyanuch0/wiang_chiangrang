@@ -75,12 +75,24 @@
       padding: 15px;
       margin-top: 40px;
     }
+    .back-btn {
+      margin-top: 15px;
+      background: #ec407a;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .back-btn:hover {
+      background: #c2185b;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>เวียงเชียงแรง</h1>
-    <p>มหาวิทยาลัยพะเยา</p>
+    <h1>โรงเรียนบ้านตัวอย่าง</h1>
+    <p>แหล่งเรียนรู้เพื่ออนาคตที่สดใส</p>
   </header>
 
   <nav>
@@ -92,7 +104,7 @@
   </nav>
 
   <div class="hero">
-    ยินดีต้อนรับสู่เว็บไซต์เวียงเชียงแรง
+    ยินดีต้อนรับสู่โรงเรียนบ้านตัวอย่าง
   </div>
 
   <div class="content">
@@ -107,7 +119,10 @@
   </div>
 
   <footer>
-    &copy; 2025 Wiang Chiangrang - สงวนลิขสิทธิ์
+    &copy; 2025 โรงเรียนบ้านตัวอย่าง - สงวนลิขสิทธิ์
+    <br>
+    <!-- ปุ่มย้อนกลับ -->
+    <button class="back-btn" onclick="goBack()">ย้อนกลับ</button>
   </footer>
 
   <script>
@@ -122,8 +137,10 @@
       }
       return false;
     }
+
+    function goBack() {
+      window.history.back();
+    }
   </script>
 </body>
 </html>
-
-
