@@ -21,11 +21,24 @@
       padding: 8px 15px;
       font-size: 16px;
       margin-left: 5px;
+      cursor: pointer;
     }
     img {
       max-width: 600px;
       border: 2px solid #ccc;
       border-radius: 10px;
+    }
+    .back-btn {
+      margin-top: 20px;
+      background: #f06292;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .back-btn:hover {
+      background: #ec407a;
     }
   </style>
 </head>
@@ -42,6 +55,11 @@
   <p>นี่คือโปสเตอร์ที่คุณค้นหา</p>
   <img src="251322.png" alt="โปสเตอร์เวียงคืนถิ่น">
 
+  <!-- ปุ่มกลับไปหน้า index.html -->
+  <div>
+    <button class="back-btn" onclick="goHome()">กลับหน้าหลัก</button>
+  </div>
+
   <script>
     function searchKeyword() {
       const keyword = document.getElementById("searchBox").value.trim();
@@ -54,9 +72,11 @@
       }
       return false;
     }
+
+    // ฟังก์ชันกลับไปหน้า index.html
+    function goHome() {
+      window.location.href = "index.html";
+    }
   </script>
 </body>
 </html>
-
-
-
