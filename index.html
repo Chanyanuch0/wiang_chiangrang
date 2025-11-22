@@ -2,12 +2,50 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>ค้นหา</title>
+  <title>เวียงเชียงแรง</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Prompt", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #f52f9f;
+      color: white;
+      padding: 20px;
       text-align: center;
-      margin-top: 150px;
+    }
+    nav {
+      background: #d20074;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url("school-banner.jpg") no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+    .search-box {
+      margin-top: 20px;
     }
     input[type="text"] {
       width: 400px;
@@ -18,28 +56,67 @@
       padding: 10px 20px;
       font-size: 18px;
       margin-left: 10px;
+      background: #ee3daa;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #b11f72;
+    }
+    footer {
+      background: #75044f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>ค้นหา</h1>
-  <form onsubmit="return searchKeyword()">
-    <input type="text" id="searchBox" placeholder="พิมพ์คำค้นหา...">
-    <button type="submit">ค้นหา</button>
-  </form>
+  <header>
+    <h1>ยินดีต้อนรับเข้าสู่ เวียงเชียงแรง</h1>
+    <p>เชียงแรง แฮงแต้หนา</p>
+  </header>
+
+  <nav>
+    <a href="#">หน้าหลัก</a>
+    <a href="#">เกี่ยวกับเรา</a>
+    <a href="#">ข่าวสาร</a>
+    <a href="#">กิจกรรม</a>
+    <a href="#">ติดต่อ</a>
+  </nav>
+
+  <div class="hero">
+    ยินดีต้อนรับสู่โรงเรียนบ้านตัวอย่าง
+  </div>
+
+  <div class="content">
+    <h2>ค้นหากิจกรรมและโครงการ</h2>
+    <p>พิมพ์คำค้นหาเพื่อดูรายละเอียดกิจกรรมที่เกี่ยวข้อง</p>
+    <div class="search-box">
+      <form onsubmit="return searchKeyword()">
+        <input type="text" id="searchBox" placeholder="พิมพ์คำค้นหา...">
+        <button type="submit">ค้นหา</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 เวียงเชียงแรง
+  </footer>
 
   <script>
     function searchKeyword() {
       const keyword = document.getElementById("searchBox").value.trim();
-
       if (keyword === "เวียงคืนถิ่น") {
-        window.location.href = "result.html"; // เพจที่ 2
+        window.location.href = "result.html";
       } else if (keyword === "ธิดาข้าวทิพย์") {
-        window.location.href = "page3.html"; // เพจที่ 3
+        window.location.href = "page3.html";
       } else {
         alert("ไม่พบผลลัพธ์สำหรับ: " + keyword);
       }
-      return false; // ป้องกันการ reload หน้า
+      return false;
     }
   </script>
 </body>
