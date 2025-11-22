@@ -7,7 +7,20 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 50px;
+      margin-top: 30px;
+    }
+    .search-bar {
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 15px;
+      font-size: 16px;
+      margin-left: 5px;
     }
     img {
       max-width: 600px;
@@ -18,18 +31,36 @@
       margin-top: 20px;
       font-size: 22px;
       font-weight: bold;
-      color: #d6336c; 
+      color: #d6336c;
     }
   </style>
 </head>
 <body>
-  <h1>ธิดาข้าวทิพย์</h1>
-  <p>ร่วมเป็นหนึ่งในผู้เข้าประกวดได้ เร็วๆนี้</p>
-  
-  <img src="poster2.jpg" alt="โปสเตอร์ธิดาข้าวทิพย์">
+  <!-- กล่องค้นหาด้านบน -->
+  <div class="search-bar">
+    <form onsubmit="return searchKeyword()">
+      <input type="text" id="searchBox" placeholder="พิมพ์คำค้นหา...">
+      <button type="submit">ค้นหา</button>
+    </form>
+  </div>
 
-  
-  
+  <h1>ธิดาข้าวทิพย์</h1>
+  <p>นี่คือโปสเตอร์ของธิดาข้าวทิพย์</p>
+  <img src="poster2.jpg" alt="โปสเตอร์ธิดาข้าวทิพย์">
+  <p class="highlight">ร่วมเป็นหนึ่งในผู้เข้าประกวดได้เร็วๆนี้</p>
+
+  <script>
+    function searchKeyword() {
+      const keyword = document.getElementById("searchBox").value.trim();
+      if (keyword === "เวียงคืนถิ่น") {
+        window.location.href = "result.html";
+      } else if (keyword === "ธิดาข้าวทิพย์") {
+        window.location.href = "page3.html";
+      } else {
+        alert("ไม่พบผลลัพธ์สำหรับ: " + keyword);
+      }
+      return false;
+    }
+  </script>
 </body>
 </html>
-
