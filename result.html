@@ -2,26 +2,58 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>โปสเตอร์ เวียงคืนถิ่น</title>
+  <title>ผลการค้นหา: เวียงคืนถิ่น</title>
   <style>
     body {
-      background-color: #fdf6f0;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      margin-top: 30px;
     }
-    h1 {
-      color: #d35400;
+    .search-bar {
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 15px;
+      font-size: 16px;
+      margin-left: 5px;
     }
     img {
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 600px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>โปสเตอร์กิจกรรม เวียงคืนถิ่น</h1>
-  <img src="251322.png" alt="โปสเตอร์เวียงคืนถิ่น">
+  <!-- กล่องค้นหาด้านบน -->
+  <div class="search-bar">
+    <form onsubmit="return searchKeyword()">
+      <input type="text" id="searchBox" placeholder="พิมพ์คำค้นหา...">
+      <button type="submit">ค้นหา</button>
+    </form>
+  </div>
+
+  <h1>เวียงคืนถิ่น</h1>
+  <p>นี่คือโปสเตอร์ที่คุณค้นหา</p>
+  <img src="poster.jpg" alt="โปสเตอร์เวียงคืนถิ่น">
+
+  <script>
+    function searchKeyword() {
+      const keyword = document.getElementById("searchBox").value.trim();
+      if (keyword === "เวียงคืนถิ่น") {
+        window.location.href = "result.html";
+      } else if (keyword === "ธิดาข้าวทิพย์") {
+        window.location.href = "page3.html";
+      } else {
+        alert("ไม่พบผลลัพธ์สำหรับ: " + keyword);
+      }
+      return false;
+    }
+  </script>
 </body>
 </html>
