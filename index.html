@@ -2,23 +2,23 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>เวียงเชียงแรง</title>
+  <title>โรงเรียนบ้านตัวอย่าง</title>
   <style>
     body {
       font-family: "Prompt", Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f7fa;
+      background: #fff0f5; /* ชมพูอ่อน */
       color: #333;
     }
     header {
-      background: #f52f9f;
+      background: #ff80ab; /* ชมพูสด */
       color: white;
       padding: 20px;
       text-align: center;
     }
     nav {
-      background: #d20074;
+      background: #f48fb1; /* ชมพูพาสเทล */
       padding: 10px;
       text-align: center;
     }
@@ -28,17 +28,18 @@
       text-decoration: none;
       font-weight: bold;
     }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .hero {
-      background: url("school-banner.jpg") no-repeat center center;
-      background-size: cover;
-      height: 300px;
+      background: #fff0f5; /* ชมพูอ่อน */
+      height: 250px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      font-size: 36px;
+      color: #880e4f;
+      font-size: 32px;
       font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
     .content {
       padding: 40px;
@@ -51,21 +52,24 @@
       width: 400px;
       padding: 10px;
       font-size: 18px;
+      border: 2px solid #e880a2;
+      border-radius: 5px;
     }
     button {
       padding: 10px 20px;
       font-size: 18px;
       margin-left: 10px;
-      background: #ee3daa;
+      background: #f06292;
       color: white;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
-      background: #b11f72;
+      background: #ec407a;
     }
     footer {
-      background: #75044f;
+      background: #ff80ab;
       color: white;
       text-align: center;
       padding: 15px;
@@ -75,20 +79,20 @@
 </head>
 <body>
   <header>
-    <h1>ยินดีต้อนรับเข้าสู่ เวียงเชียงแรง</h1>
-    <p>มหาวิทยาลัยพะเยา</p>
+    <h1>โรงเรียนบ้านตัวอย่าง</h1>
+    <p>แหล่งเรียนรู้เพื่ออนาคตที่สดใส</p>
   </header>
 
   <nav>
-    <a href="#">หน้าหลัก</a>
-    <a href="#">เกี่ยวกับเรา</a>
-    <a href="#">ข่าวสาร</a>
-    <a href="#">กิจกรรม</a>
-    <a href="#">ติดต่อ</a>
+    <a href="home.html">หน้าหลัก</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="news.html">ข่าวสาร</a>
+    <a href="activities.html">กิจกรรม</a>
+    <a href="contact.html">ติดต่อ</a>
   </nav>
 
   <div class="hero">
-    ยินดีต้อนรับสู่เว็บไซต์เวียงเชียงแรง
+    ยินดีต้อนรับสู่โรงเรียนบ้านตัวอย่าง
   </div>
 
   <div class="content">
@@ -103,7 +107,7 @@
   </div>
 
   <footer>
-    &copy; 2025 เวียงเชียงแรง
+    &copy; 2025 โรงเรียนบ้านตัวอย่าง - สงวนลิขสิทธิ์
   </footer>
 
   <script>
