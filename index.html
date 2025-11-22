@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>ค้นหาเวียงคืนถิ่น</title>
+  <title>ค้นหา</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,8 +31,11 @@
   <script>
     function searchKeyword() {
       const keyword = document.getElementById("searchBox").value.trim();
+
       if (keyword === "เวียงคืนถิ่น") {
-        window.location.href = "result.html";
+        window.location.href = "result.html"; // เพจที่ 2
+      } else if (keyword === "ธิดาข้าวทิพย์") {
+        window.location.href = "page3.html"; // เพจที่ 3
       } else {
         alert("ไม่พบผลลัพธ์สำหรับ: " + keyword);
       }
